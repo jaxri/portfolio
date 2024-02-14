@@ -1,6 +1,6 @@
 {
-    "title": "Stylish Portfolio",
-    "name": "startbootstrap-stylish-portfolio",
+    "title": "Jackson's Portfolio",
+    "name": "portfolio",
     "version": "6.0.6",
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
@@ -21,19 +21,9 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/theme/stylish-portfolio",
-    "bugs": {
-        "url": "https://github.com/StartBootstrap/startbootstrap-stylish-portfolio/issues",
-        "email": "feedback@startbootstrap.com"
-    },
-    "license": "MIT",
-    "author": "Start Bootstrap",
-    "contributors": [
-        "David Miller (https://davidmiller.io/)"
-    ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-stylish-portfolio.git"
+        "url": "https://github.com/jaxri/portfolio.git"
     },
     "devDependencies": {
         "autoprefixer": "10.4.14",
