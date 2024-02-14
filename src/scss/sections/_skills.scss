@@ -1,7 +1,10 @@
 // 
 // Services
 // 
-
+#skills {
+    background-color: $primary;
+    background: linear-gradient(to bottom, $primary 0%, #fff 25%);
+}
 .service-icon {
     background-color: $white;
     color: $primary;

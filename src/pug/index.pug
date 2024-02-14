@@ -45,8 +45,6 @@ html(lang='en')
                 li.sidebar-nav-item
                     a(href='#intern') Internships
                 li.sidebar-nav-item
-                    a(href='#resume') Resume/CV
-                li.sidebar-nav-item
                     a(href='#contact') Contact
 
         // Header
@@ -56,17 +54,17 @@ html(lang='en')
                 a.btn.btn-primary.btn-xl(href='#about') About Me
 
         // About
-        section#about.content-section.bg-light
+        section#about.about.content-section.bg-light
             .container.px-4.px-lg-5.text-center
                 .row.gx-4.gx-lg-5.justify-content-center
                     .col-lg-10
                         h1 About Me
                         p.lead.mb-5
                             | Insert BIO
-                        a.btn.btn-dark.btn-xl(href='#projects') Projects
+                        a.btn.btn-dark.btn-xl(href='/assets/Resume.pdf', target='_blank') View Resume
 
         // Projects
-        section#projects.content-section.bg-primary.text-white.text-center
+        section#projects.projects.content-section.bg-primary.text-black.text-center
             .container.px-4.px-lg-5
                 .content-section-heading.text-center
                     h2.mb-5 Projects
@@ -101,14 +99,14 @@ html(lang='en')
                             img.img-fluid(src='assets/img/portfolio-4.jpg', alt='...')
 
         // Skills
-        section#skills.content-section.bg-light
+        section#skills.skills.content-section.bg-light
             .container.px-4.px-lg-5.text-center
                 h2.mx-auto.mb-5
                     | Skills
                 a.btn.btn-primary.btn-xl(href='https://startbootstrap.com/theme/stylish-portfolio/') Download Now!
 
         // Internships
-        section#intern.content-section.bg-primary.text-white.text-center
+        section#intern.intern.content-section.bg-primary.text-black.text-center
             .container.px-4.px-lg-5
                 .content-section-heading.text-center
                     h2.mb-5 Internships
@@ -142,27 +140,23 @@ html(lang='en')
                                     p.mb-0 A yellow workspace with some scissors, pencils, and other objects.
                             img.img-fluid(src='assets/img/portfolio-4.jpg', alt='...')
         // resume
-        section#resume.content-section.bg-light
+        section#contact.contact.content-section.bg-light
             .container.px-4.px-lg-5.text-center
                 h2.mx-auto.mb-5
-                    | Resume/CV
+                    | Contact Me
                 a.btn.btn-primary.btn-xl(href='https://startbootstrap.com/theme/stylish-portfolio/') Download Now!
 
 
         // Footer
-        footer.footer.bg-primary.text-center
+        footer#footer.footer.bg-primary.text-center
             .container.px-4.px-lg-5
                 ul.list-inline.mb-5
                     li.list-inline-item
                         a.social-link.rounded-circle.text-white.mr-3(href='#!')
-                            i.icon-social-facebook
-                    li.list-inline-item
-                        a.social-link.rounded-circle.text-white.mr-3(href='#!')
-                            i.icon-social-twitter
+                            i.icon-social-linkedin
                     li.list-inline-item
                         a.social-link.rounded-circle.text-white(href='#!')
                             i.icon-social-github
-                p.text-muted.small.mb-0 Copyright &copy; Your Website 2023
 
         // Scroll to Top Button
         a.scroll-to-top.rounded(href='#page-top')
