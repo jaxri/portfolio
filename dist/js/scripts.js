@@ -41,40 +41,71 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // Scroll to top button appear
     document.addEventListener('scroll', () => {
-        const scrollToTop = document.body.querySelector('.scroll-to-top');
+        const scrollToTop = document.querySelector('.scroll-to-top');
         if (document.documentElement.scrollTop > 100) {
-            if (!scrollToTopVisible) {
-                fadeIn(scrollToTop);
-                scrollToTopVisible = true;
-            }
+            scrollToTop.style.display = 'block'; // Show button when scrolled down
         } else {
-            if (scrollToTopVisible) {
-                fadeOut(scrollToTop);
-                scrollToTopVisible = false;
-            }
+            scrollToTop.style.display = 'none'; // Hide button when at the top
         }
-    })
+    });
 })
 
-function fadeOut(el) {
+function fadeOut(el, duration) {
     el.style.opacity = 1;
+    var start = performance.now();
     (function fade() {
-        if ((el.style.opacity -= .1) < 0) {
-            el.style.display = "none";
-        } else {
+        var elapsed = performance.now() - start;
+        el.style.opacity = 1 - elapsed / duration;
+        if (elapsed < duration) {
             requestAnimationFrame(fade);
+        } else {
+            el.style.display = "none";
         }
     })();
-};
+}
 
-function fadeIn(el, display) {
+function fadeIn(el, duration, display) {
     el.style.opacity = 0;
     el.style.display = display || "block";
+    var start = performance.now();
     (function fade() {
-        var val = parseFloat(el.style.opacity);
-        if (!((val += .1) > 1)) {
-            el.style.opacity = val;
+        var elapsed = performance.now() - start;
+        el.style.opacity = elapsed / duration;
+        if (elapsed < duration) {
             requestAnimationFrame(fade);
         }
     })();
-};
+}
+document.addEventListener('DOMContentLoaded', function () {
+    var openLinks = document.querySelectorAll('.portfolio-item');
+    var closeBtns = document.querySelectorAll('[id^="close-overlay"]');
+
+    function openOverlay(overlayId) {
+        console.log("Opening overlay:", overlayId);
+        var overlay = document.getElementById(overlayId);
+        fadeIn(overlay, 350); // Fade in the overlay
+    }
+
+    function closeOverlay(overlayId) {
+        console.log("Closing overlay:", overlayId);
+        var overlay = document.getElementById(overlayId);
+        fadeOut(overlay, 350); // Fade out the overlay
+    }
+
+    openLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            var overlayId = this.closest('.portfolio-item').getAttribute('href').replace('#', '');
+            console.log("Clicked caption:", overlayId);
+            openOverlay(overlayId);
+        });
+    });
+
+    closeBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var overlayId = this.getAttribute('id').replace('close-overlay', 'overlay');
+            closeOverlay(overlayId);
+        });
+    });
+    
+});
