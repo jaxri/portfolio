@@ -12121,20 +12121,14 @@ html {
 
 #about {
   background: #fff;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
 }
-
-.callout {
-  padding: 15rem 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-callout.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+#about h2, #about .h2 {
+  text-align: center;
 }
-.callout h2, .callout .h2 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  display: block;
-  max-width: 30rem;
+#about p {
+  text-align: left;
 }
 
 #footer {
@@ -12391,10 +12385,26 @@ footer.footer .social-link:hover {
             clip-path: inset(2rem);
   }
   .portfolio-item:hover .caption {
-    background-color: rgba(27, 104, 159, 0.9);
+    background-color: rgba(51, 51, 51, 0.7);
     -webkit-clip-path: inset(2rem);
             clip-path: inset(2rem);
   }
+}
+.portfolio-item:hover {
+  /* Apply the same effect to the video */
+}
+.portfolio-item:hover img {
+  -webkit-clip-path: inset(2rem);
+          clip-path: inset(2rem);
+}
+.portfolio-item:hover .caption {
+  background-color: rgba(51, 51, 51, 0.7);
+  -webkit-clip-path: inset(2rem);
+          clip-path: inset(2rem);
+}
+.portfolio-item:hover video {
+  -webkit-clip-path: inset(2rem);
+          clip-path: inset(2rem);
 }
 
 #skills {

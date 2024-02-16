@@ -145,9 +145,24 @@
             }
 
             .caption {
-                background-color: fade-out($primary, 0.1);
+                background-color: fade-out(#333, 0.3);
                 clip-path: inset(2rem);
             }
+        }
+    }
+    &:hover {
+        img {
+            clip-path: inset(2rem);
+        }
+
+        .caption {
+            background-color: fade-out(#333, 0.3);
+            clip-path: inset(2rem);
+        }
+
+        /* Apply the same effect to the video */
+        video {
+            clip-path: inset(2rem);
         }
     }
 }
