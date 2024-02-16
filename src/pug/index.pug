@@ -54,15 +54,25 @@ html(lang='en')
                 a.btn.btn-dark.btn-xl(href='#about') About Me
 
         // About
-        section#about.about.content-section
+        section#about
             .container.px-4.px-lg-5.text-center
-                .row.gx-4.gx-lg-5.justify-content-center
-                    .col-lg-10
-                        h2.mb-5 About Me
+                .content-section-heading.text-center
+                    h2.mb-5 About Me
+                .row.align-items-center
+                    .col-lg-6
+                        img.img-fluid(src='/assets/img/IMG_0420.jpg', alt='Your Image')
+                    .col-lg-6.text-left
                         p.lead.mb-5
-                            | Insert BIO
-                        a.btn.btn-primary.btn-xl(href='/assets/Resume.pdf', target='_blank') View Resume
-
+                            | Hello, I'm Jackson Rini, and I'm thrilled to be graduating with a Bachelor of Science in Computer Science from the University of Colorado, Boulder. Throughout my academic journey, I've delved deep into the captivating realm of computer science, delving into diverse topics ranging from algorithms and data structures to software engineering and artificial intelligence.
+                        p.lead.mb-5
+                            | My time at CU Boulder has been marked by enriching experiences, including engaging in various internships and projects. These opportunities have allowed me to collaborate within teams, acquire new skills on the go, and adeptly navigate unforeseen challenges.
+                        p.lead.mb-5    
+                            | Beyond the realm of code, I'm deeply passionate about playing guitar, exercising in the gym, and reading literature, which provide balance and inspiration in my life. Whether it's learning songs on the guitar or observing different art forms, I find that diverse interests fuel creativity and enrich my perspective as a computer scientist.
+                        p.lead.mb-5    
+                            | As I embark on the next chapter of my journey, I'm excited to find projects and challenges to immerse myself in. Whether it's further schooling, furthering my career, or independent projects, I'm committed to lifelong learning and continuous growth in the dynamic field of computer science.   
+                            | I'm eager to apply my skills and knowledge to make contributions to meaningful projects. Let's connect and explore how we can collaborate together.
+                a.btn.btn-primary.btn-xl(href='/assets/Resume.pdf', target='_blank') View Resume
+                a.btn.btn-primary.btn-xl(href='#contact') Contact
         // Projects
         section#projects.projects.content-section.bg-primary.text-black.text-center
             .container.px-4.px-lg-5
@@ -85,7 +95,8 @@ html(lang='en')
                             video.img-fluid(autoplay loop muted)
                                 source(src='assets/vid/datamining2.mp4', type='video/mp4')
                                 Your browser does not support the video tag.
-                    .col-lg-12
+                .row.gx-0.justify-content-center
+                    .col-lg-6
                         a.portfolio-item(href='#overlay3')
                             .caption
                                 .caption-content
@@ -100,7 +111,7 @@ html(lang='en')
             #overlay2.overlay
                 .overlay-content
                     button.close-btn#close-overlay2 &times;
-                    h2 Project 2 Description
+                    h2 Car Price Prediction
                     p This is the description of Project 2.
             #overlay3.overlay
                 .overlay-content
@@ -149,23 +160,20 @@ html(lang='en')
                                     .h2 Workspace
                                     p.mb-0 A yellow workspace with some scissors, pencils, and other objects.
                             img.img-fluid(src='assets/img/portfolio-4.jpg', alt='...')
-        // resume
-        section#contact.contact.content-section
-            .container.px-4.px-lg-5.text-center
-                h2.mx-auto.mb-5
-                    | Contact Me
-                a.btn.btn-primary.btn-xl(href='https://startbootstrap.com/theme/stylish-portfolio/') Download Now!
-
 
         // Footer
         footer#footer.footer.text-center
-            .container.px-4.px-lg-5
+            .container.px-4.px-lg-5.text-center
+                    h2.mx-auto.mb-5
+                        | Contact Me
+                    a.btn.btn-primary.btn-xl(href='mailto:jacksonrini3@gmail.com') Send me an Email!
+            .container.px-4.px-lg-5(style="padding-top: 20px;")
                 ul.list-inline.mb-5
                     li.list-inline-item
-                        a.social-link.rounded-circle.text-white.mr-3(href='#!')
+                        a.social-link.rounded-circle.text-white.mr-3(href='https://www.linkedin.com/in/jackson-rini-a6ba601b8/', target='_blank')
                             i.icon-social-linkedin
                     li.list-inline-item
-                        a.social-link.rounded-circle.text-white(href='#!')
+                        a.social-link.rounded-circle.text-white(href='https://github.com/jaxri', target='_blank')
                             i.icon-social-github
 
         // Scroll to Top Button
