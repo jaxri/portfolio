@@ -35,17 +35,17 @@
         <header class="masthead d-flex align-items-center">
             <div class="container px-4 px-lg-5 text-center">
                 <h1 class="mb-1">Jackson Rini</h1>
-                <a class="btn btn-primary btn-xl" href="#about">About Me</a>
+                <a class="btn btn-dark btn-xl" href="#about">About Me</a>
             </div>
         </header>
         <!-- About-->
-        <section class="about content-section bg-light" id="about">
+        <section class="about content-section" id="about">
             <div class="container px-4 px-lg-5 text-center">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-10">
-                        <h1>About Me</h1>
+                        <h2 class="mb-5">About Me</h2>
                         <p class="lead mb-5">Insert BIO</p>
-                        <a class="btn btn-dark btn-xl" href="/assets/Resume.pdf" target="_blank">View Resume</a>
+                        <a class="btn btn-primary btn-xl" href="/assets/Resume.pdf" target="_blank">View Resume</a>
                     </div>
                 </div>
             </div>
@@ -56,29 +56,32 @@
                 <div class="content-section-heading text-center"><h2 class="mb-5">Projects</h2></div>
                 <div class="row gx-0">
                     <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
+                        <a class="portfolio-item" href="#overlay1">
                             <div class="caption">
                                 <div class="caption-content">
-                                    <div class="h2">Stationary</div>
-                                    <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                                    <div class="h2">Senior Project - Superpowers</div>
+                                    <p class="mb-0">This project aims to automate the entire venture investment opportunity discovery and evaluation process.</p>
                                 </div>
                             </div>
                             <img class="img-fluid" src="assets/img/portfolio-1.jpg" alt="..." />
                         </a>
                     </div>
                     <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
+                        <a class="portfolio-item" href="#overlay2">
                             <div class="caption">
                                 <div class="caption-content">
-                                    <div class="h2">Ice Cream</div>
-                                    <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                                    <div class="h2">Car Price Prediction</div>
+                                    <p class="mb-0">Data Mining using Machine Learning and Regression</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio-2.jpg" alt="..." />
+                            <video class="img-fluid" autoplay loop muted>
+                                <source src="assets/vid/datamining2.mp4" type="video/mp4" />
+                                <Your>browser does not support the video tag.</Your>
+                            </video>
                         </a>
                     </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
+                    <div class="col-lg-12">
+                        <a class="portfolio-item" href="#overlay3">
                             <div class="caption">
                                 <div class="caption-content">
                                     <div class="h2">Strawberries</div>
@@ -88,17 +91,27 @@
                             <img class="img-fluid" src="assets/img/portfolio-3.jpg" alt="..." />
                         </a>
                     </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Workspace</div>
-                                    <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-4.jpg" alt="..." />
-                        </a>
-                    </div>
+                </div>
+            </div>
+            <div class="overlay" id="overlay1">
+                <div class="overlay-content">
+                    <button class="close-btn" id="close-overlay1">&times;</button>
+                    <h2>Project 1 Description</h2>
+                    <p>This is the description of Project 1.</p>
+                </div>
+            </div>
+            <div class="overlay" id="overlay2">
+                <div class="overlay-content">
+                    <button class="close-btn" id="close-overlay2">&times;</button>
+                    <h2>Project 2 Description</h2>
+                    <p>This is the description of Project 2.</p>
+                </div>
+            </div>
+            <div class="overlay" id="overlay3">
+                <div class="overlay-content">
+                    <button class="close-btn" id="close-overlay3">&times;</button>
+                    <h2>Project 3 Description</h2>
+                    <p>This is the description of Project 3.</p>
                 </div>
             </div>
         </section>
@@ -162,14 +175,14 @@
             </div>
         </section>
         <!-- resume-->
-        <section class="contact content-section bg-light" id="contact">
+        <section class="contact content-section" id="contact">
             <div class="container px-4 px-lg-5 text-center">
                 <h2 class="mx-auto mb-5">Contact Me</h2>
                 <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/theme/stylish-portfolio/">Download Now!</a>
             </div>
         </section>
         <!-- Footer-->
-        <footer class="footer bg-primary text-center" id="footer">
+        <footer class="footer text-center" id="footer">
             <div class="container px-4 px-lg-5">
                 <ul class="list-inline mb-5">
                     <li class="list-inline-item">
