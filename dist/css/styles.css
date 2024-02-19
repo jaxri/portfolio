@@ -12285,6 +12285,9 @@ footer.footer .social-link:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
   transition: transform 0.3s ease; /* Transform transition */
 }
+#projects .overlay-content p {
+  text-align: left;
+}
 #projects .overlay.fade-in {
   display: block;
   opacity: 1; /* Set opacity to 1 to fade in */
