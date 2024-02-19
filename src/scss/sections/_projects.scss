@@ -35,6 +35,9 @@
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
         transition: transform 0.3s ease; /* Transform transition */
+        p {
+            text-align: left;
+        }
     }
     
     .overlay.fade-in {

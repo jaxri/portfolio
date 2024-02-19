@@ -16,6 +16,9 @@ html(lang='en')
         // Font Awesome icons (free version)
         script(src='https://use.fontawesome.com/releases/v6.3.0/js/all.js', crossorigin='anonymous')
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
         // Simple line icons
         link(href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css', rel='stylesheet')
 
@@ -112,7 +115,36 @@ html(lang='en')
                 .overlay-content
                     button.close-btn#close-overlay2 &times;
                     h2 Car Price Prediction
-                    p This is the description of Project 2.
+                    .row.align-items-center
+                        .col-lg-6.text-left
+                            p.text-left
+                                strong Used Cars Market Analysis in Saudi Arabia
+                            p.text-left
+                                strong Abstract:
+                                | This project utilizes regression analysis to assess the depreciation rates of used car brands in Saudi Arabia, focusing on mileage as a determining factor. Two datasets were consolidated and cleaned to enhance data quality. Three regression models - Random Forest, Linear Regression, and XGBoost - were employed to predict car prices and evaluate depreciation rates. XGBoost emerged as the most accurate model, revealing insights into which car brands maintain their value best. 
+                            p.text-left
+                                strong Introduction:
+                                | The COVID-19 pandemic and economic factors have led to a surge in the used car market in Saudi Arabia, prompting a shift in consumer preferences towards more affordable options. Understanding the factors influencing used car depreciation rates has become crucial. This project aims to provide insights into which cars retain their value the most, aiding consumers in making informed purchasing decisions.
+                            p.text-left
+                                strong Related Work:
+                                | Previous studies, such as Mammadov (2021) and Erdem & Senturk (2009), have analyzed used car markets using regression techniques, offering valuable insights into factors affecting car prices and depreciation rates.
+                            p.text-left
+                                strong Main Technique:
+                                | Data understanding involved consolidating and cleaning datasets, followed by preprocessing for regression analysis. Three regression models - Random Forest, Linear Regression, and XGBoost - were employed to predict car prices and evaluate depreciation rates. 
+                            p.text-left
+                                strong Evaluation:
+                                | Depreciation rates of different car brands were evaluated using regression models, revealing insights into which brands retain their value best. GMC, Chevrolet, and Mitsubishi were identified as top performers in maintaining value.
+                            p.text-left
+                                strong Conclusion:
+                                | This study provides valuable insights into the used car market in Saudi Arabia, particularly regarding depreciation rates of various brands. Consumers can now make more informed decisions when purchasing used cars, maximizing the value of their investment.
+                            p.text-left
+                                strong Future Work:
+                                | Future studies aim to enhance data quality by including more diverse datasets and exploring additional predictive analyses, such as deep neural networks. Furthermore, incorporating broader economic factors into the analysis could offer a more comprehensive understanding of the Saudi car market.
+                        .col-lg-6 
+                            iframe(src='/assets/pdfs/used-cars.pdf#toolbar=0', width='100%', height='600px', scrolling='yes')
+                    .row.text-center
+                        .col-lg-12
+                            a.btn.btn-primary.btn-xl(href='https://github.com/jaxri/DataMiningProject/tree/main', target='_blank') View Source Code
             #overlay3.overlay
                 .overlay-content
                     button.close-btn#close-overlay3 &times;
@@ -122,9 +154,19 @@ html(lang='en')
         // Skills
         section#skills.skills.content-section.bg-light
             .container.px-4.px-lg-5.text-center
-                h2.mx-auto.mb-5
-                    | Skills
-                a.btn.btn-primary.btn-xl(href='https://startbootstrap.com/theme/stylish-portfolio/') Download Now!
+                h2.mx-auto.mb-5 Skills
+                .row
+                    .col-lg-12
+                        i.devicon-cplusplus-plain-wordmark.fa-4x.mb-1(title="C++")
+                        i.devicon-java-plain-wordmark.fa-4x.mb-1(title="Java")
+                        i.devicon-html5-plain-wordmark.fa-4x.mb-1(title="HTML")
+                        i.devicon-css3-plain-wordmark.fa-4x.mb-1(title="CSS")
+                        i.devicon-mysql-plain-wordmark.fa-4x.mb-1(title="mySQL")
+                        i.devicon-react-original-wordmark.fa-4x.mb-1(title="React.js")
+                        i.devicon-scala-plain-wordmark.fa-4x.mb-1(title="Scala")
+                        i.devicon-javascript-plain-wordmark.fa-4x.mb-1(title="JavaScript")
+                        i.devicon-python-plain-wordmark.fa-4x.mb-1(title="Python")
+
 
         // Internships
         section#intern.intern.content-section.bg-primary.text-black.text-center
