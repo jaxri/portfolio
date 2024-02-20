@@ -35,8 +35,11 @@
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
         transition: transform 0.3s ease; /* Transform transition */
-        p {
+        .overlay2p {
             text-align: left;
+        }
+        .overlay1p {
+            text-align: center;
         }
     }
     
@@ -87,10 +90,15 @@
     display: block;
     position: relative;
     overflow: hidden;
+    width: 100%;
     max-width: 530px;
     margin: auto auto 1rem;
 
-    
+    img {
+        width: 100%; /* Make images fill their containers */
+        height: 400px; /* Set a fixed height */
+        object-fit: cover; /* Maintain aspect ratio and fill container */
+    }
     .caption {
         display: flex;
         height: 100%;
@@ -105,22 +113,23 @@
         .caption-content {
             color: $white;
             margin: auto;
+            text-align: center;
 
             h2 {
-                font-size: 0.8rem;
+                font-size: 1rem;
                 text-transform: uppercase;
             }
 
             p {
                 font-weight: 300;
-                font-size: 1.2rem;
+                font-size: 1.4rem;
             }
         }
     }
     video {
         width: 100%;
-        height: 100%;
-        object-fit: fill;
+        height: 400px;
+        object-fit: cover;
     }
     @media(min-width: 992px) {
         max-width: none;
@@ -135,6 +144,7 @@
                 margin-left: 5rem;
                 margin-right: 5rem;
                 margin-bottom: 5rem;
+                
             }
         }
 
