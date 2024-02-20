@@ -12189,11 +12189,14 @@ footer.footer .social-link:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
   transition: transform 0.3s ease; /* Transform transition */
 }
-#intern .overlay-content .overlay2p {
+#intern .overlay-content .overlay4p {
   text-align: left;
 }
-#intern .overlay-content .overlay1p {
-  text-align: center;
+#intern .overlay-content .overlay5p {
+  text-align: left;
+}
+#intern .overlay-content .overlay6p {
+  text-align: left;
 }
 #intern .overlay.fade-in {
   display: block;
@@ -12236,14 +12239,15 @@ footer.footer .social-link:hover {
   width: 100%;
   max-width: 530px;
   margin: auto auto 1rem;
-  background: transparent;
+  background-color: transparent !important;
 }
 .portfolio-item img {
   width: 100%;
   height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
-  filter: none;
+  background-blend-mode: normal;
+  filter: none !important;
 }
 .portfolio-item .caption {
   display: flex;
@@ -12433,12 +12437,15 @@ footer.footer .social-link:hover {
   width: 100%;
   max-width: 530px;
   margin: auto auto 1rem;
+  background-color: transparent !important;
 }
 .portfolio-item img {
   width: 100%; /* Make images fill their containers */
   height: 400px; /* Set a fixed height */
   -o-object-fit: cover;
      object-fit: cover; /* Maintain aspect ratio and fill container */
+  background-blend-mode: normal;
+  filter: none !important;
 }
 .portfolio-item .caption {
   display: flex;
