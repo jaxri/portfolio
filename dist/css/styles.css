@@ -12157,36 +12157,131 @@ footer.footer .social-link:hover {
 
 #intern {
   background: #1b689f;
+  color: #212529;
+}
+#intern #overlay4,
+#intern #overlay5,
+#intern #overlay6 {
+  display: none;
+}
+#intern .overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+  z-index: 1000; /* Ensure overlay is on top of other content */
+  overflow: auto; /* Enable scrolling if content overflows */
+  transition: opacity 0.3s ease; /* Fade transition */
+}
+#intern .overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; /* Set overlay width to 80% of the viewport */
+  height: 90%; /* Set overlay height to 80% of the viewport */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+  transition: transform 0.3s ease; /* Transform transition */
+}
+#intern .overlay-content .overlay2p {
+  text-align: left;
+}
+#intern .overlay-content .overlay1p {
+  text-align: center;
+}
+#intern .overlay.fade-in {
+  display: block;
+  opacity: 1; /* Set opacity to 1 to fade in */
+}
+#intern .overlay.fade-out {
+  opacity: 0; /* Set opacity to 0 to fade out */
+  pointer-events: none; /* Disable pointer events to prevent interactions with faded out overlay */
+}
+#intern .overlay.fade-out .overlay-content {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+#intern .close-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  border: none;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  background: rgba(52, 58, 64, 0.5);
+  line-height: 50px;
+}
+#intern .close-btn:hover {
+  color: #fff;
+}
+#intern .close-btn:hover {
+  background: #343a40;
+}
+#intern .close-btn i {
+  font-weight: 800;
 }
 
 .portfolio-item {
   display: block;
   position: relative;
   overflow: hidden;
+  width: 100%;
   max-width: 530px;
   margin: auto auto 1rem;
+  background: transparent;
+}
+.portfolio-item img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: none;
 }
 .portfolio-item .caption {
   display: flex;
   height: 100%;
   width: 100%;
-  background-color: rgba(33, 37, 41, 0.2);
+  background-color: transparent;
   position: absolute;
   top: 0;
   bottom: 0;
   z-index: 1;
+  left: 0;
 }
 .portfolio-item .caption .caption-content {
-  color: #fff;
-  margin: auto 2rem 2rem;
+  position: flex;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center text horizontally */
 }
 .portfolio-item .caption .caption-content h2, .portfolio-item .caption .caption-content .h2 {
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-transform: uppercase;
+  text-align: center;
 }
 .portfolio-item .caption .caption-content p {
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+.portfolio-item video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 @media (min-width: 992px) {
   .portfolio-item {
@@ -12201,7 +12296,6 @@ footer.footer .social-link:hover {
             clip-path: inset(0px);
   }
   .portfolio-item .caption .caption-content {
-    transition: opacity 0.25s;
     margin-left: 5rem;
     margin-right: 5rem;
     margin-bottom: 5rem;
@@ -12213,15 +12307,22 @@ footer.footer .social-link:hover {
     -webkit-clip-path: inset(-1px);
             clip-path: inset(-1px);
   }
-  .portfolio-item:hover img {
-    -webkit-clip-path: inset(2rem);
-            clip-path: inset(2rem);
-  }
-  .portfolio-item:hover .caption {
-    background-color: rgba(27, 104, 159, 0.9);
-    -webkit-clip-path: inset(2rem);
-            clip-path: inset(2rem);
-  }
+}
+.portfolio-item:hover {
+  /* Apply the same effect to the video */
+}
+.portfolio-item:hover img {
+  -webkit-clip-path: inset(2rem);
+          clip-path: inset(2rem);
+}
+.portfolio-item:hover .caption {
+  background-color: rgba(51, 51, 51, 0.7);
+  -webkit-clip-path: inset(2rem);
+          clip-path: inset(2rem);
+}
+.portfolio-item:hover video {
+  -webkit-clip-path: inset(2rem);
+          clip-path: inset(2rem);
 }
 
 .masthead {
@@ -12285,8 +12386,11 @@ footer.footer .social-link:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
   transition: transform 0.3s ease; /* Transform transition */
 }
-#projects .overlay-content p {
+#projects .overlay-content .overlay2p {
   text-align: left;
+}
+#projects .overlay-content .overlay1p {
+  text-align: center;
 }
 #projects .overlay.fade-in {
   display: block;
@@ -12326,8 +12430,15 @@ footer.footer .social-link:hover {
   display: block;
   position: relative;
   overflow: hidden;
+  width: 100%;
   max-width: 530px;
   margin: auto auto 1rem;
+}
+.portfolio-item img {
+  width: 100%; /* Make images fill their containers */
+  height: 400px; /* Set a fixed height */
+  -o-object-fit: cover;
+     object-fit: cover; /* Maintain aspect ratio and fill container */
 }
 .portfolio-item .caption {
   display: flex;
@@ -12343,20 +12454,21 @@ footer.footer .social-link:hover {
 .portfolio-item .caption .caption-content {
   color: #fff;
   margin: auto;
+  text-align: center;
 }
 .portfolio-item .caption .caption-content h2, .portfolio-item .caption .caption-content .h2 {
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 .portfolio-item .caption .caption-content p {
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 .portfolio-item video {
   width: 100%;
-  height: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 992px) {
   .portfolio-item {

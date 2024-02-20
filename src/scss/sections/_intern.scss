@@ -1,42 +1,146 @@
 // 
-// Intern
+// Projects
 // 
 #intern {
     background: $primary;
+    color: $dark;
+    #overlay4,
+    #overlay5,
+    #overlay6 {
+        display: none;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+        z-index: 1000; /* Ensure overlay is on top of other content */
+        overflow: auto; /* Enable scrolling if content overflows */
+        transition: opacity 0.3s ease; /* Fade transition */
+    }
+    
+    .overlay-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%; /* Set overlay width to 80% of the viewport */
+        height: 90%; /* Set overlay height to 80% of the viewport */
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+        transition: transform 0.3s ease; /* Transform transition */
+        .overlay2p {
+            text-align: left;
+        }
+        .overlay1p {
+            text-align: center;
+        }
+    }
+    
+    .overlay.fade-in {
+        display: block;
+        opacity: 1; /* Set opacity to 1 to fade in */
+    }
+    
+    .overlay.fade-out {
+        opacity: 0; /* Set opacity to 0 to fade out */
+        pointer-events: none; /* Disable pointer events to prevent interactions with faded out overlay */
+    }
+    
+    .overlay.fade-out .overlay-content {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    .close-btn {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        border: none;
+        font-size: 25px;
+
+        width: 50px;
+        height: 50px;
+
+        text-align: center;
+
+        color: $white;
+        background: fade-out($gray-800, .5);
+
+        line-height: 50px;
+
+        &:hover {
+            color: $white;
+        }
+
+        &:hover {
+            background: $gray-800;
+        }
+
+        i {
+            font-weight: 800;
+        }
+        }
 }
 .portfolio-item {
     display: block;
     position: relative;
     overflow: hidden;
+    width: 100%;
     max-width: 530px;
     margin: auto auto 1rem;
+    background: transparent; 
 
+    img {
+        width: 100%; 
+        height: 400px; 
+        object-fit: cover;
+        filter: none;
+    }
     .caption {
         display: flex;
         height: 100%;
         width: 100%;
-        background-color: fade-out($gray-900, 0.8);
+        background-color: transparent;
         position: absolute;
         top: 0;
         bottom: 0;
         z-index: 1;
+        left: 0;
 
         .caption-content {
-            color: $white;
-            margin: auto 2rem 2rem;
-
+            position: flex;
+            bottom: 0;
+            width: 100%;
+            height: 0%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center; /* Center text horizontally */
+            // color: $white;
             h2 {
-                font-size: 0.8rem;
+                font-size: 1rem;
                 text-transform: uppercase;
+                text-align: center;
             }
 
             p {
                 font-weight: 300;
-                font-size: 1.2rem;
+                font-size: 1.4rem;
+                text-align: center;
             }
         }
     }
-
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
     @media(min-width: 992px) {
         max-width: none;
         margin: 0;
@@ -46,10 +150,11 @@
             clip-path: inset(0px);
 
             .caption-content {
-                transition: opacity 0.25s;
+                // transition: opacity 0.25s;
                 margin-left: 5rem;
                 margin-right: 5rem;
                 margin-bottom: 5rem;
+                
             }
         }
 
@@ -57,16 +162,21 @@
             transition: clip-path 0.25s ease-out;
             clip-path: inset(-1px);
         }
+        
+    }
+    &:hover {
+        img {
+            clip-path: inset(2rem);
+        }
 
-        &:hover {
-            img {
-                clip-path: inset(2rem);
-            }
+        .caption {
+            background-color: fade-out(#333, 0.3);
+            clip-path: inset(2rem);
+        }
 
-            .caption {
-                background-color: fade-out($primary, 0.1);
-                clip-path: inset(2rem);
-            }
+        /* Apply the same effect to the video */
+        video {
+            clip-path: inset(2rem);
         }
     }
 }

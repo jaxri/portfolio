@@ -87,7 +87,7 @@ html(lang='en')
                             .caption
                                 .caption-content
                                     .h2 Senior Project - Superpowers
-                                    p.mb-0 This project aims to automate the entire venture investment opportunity discovery and evaluation process.
+                                    p.mb-0 Automation of venture investment opportunity discovery and evaluation process
                             img.img-fluid(src='assets/img/portfolio-1.jpg', alt='...')
                     .col-lg-6
                         a.portfolio-item(href='#overlay2')
@@ -103,20 +103,22 @@ html(lang='en')
                         a.portfolio-item(href='#overlay3')
                             .caption
                                 .caption-content
-                                    .h2 Strawberries
-                                    p.mb-0 Strawberries are such a tasty snack, especially with a little sugar on top!
+                                    .h2 Invoicable Item Automation
+                                    p.mb-0 PDF OCR in tandem with  Selenium website interaction
                             img.img-fluid(src='assets/img/portfolio-3.jpg', alt='...')
             #overlay1.overlay
                 .overlay-content
                     button.close-btn#close-overlay1 &times;
-                    h2 Project 1 Description
-                    p This is the description of Project 1.
+                    h2 Superpowers
+                    .row.align-items-center
+                        .col-lg-12.overlay1p
+                            p This is a work in progress and will be updated upon completion.
             #overlay2.overlay
                 .overlay-content
                     button.close-btn#close-overlay2 &times;
                     h2 Car Price Prediction
                     .row.align-items-center
-                        .col-lg-6.text-left
+                        .col-lg-6.overlay2p
                             p.text-left
                                 strong Used Cars Market Analysis in Saudi Arabia
                             p.text-left
@@ -175,41 +177,59 @@ html(lang='en')
                     h2.mb-5 Internships
                 .row.gx-0
                     .col-lg-6
-                        a.portfolio-item(href='#!')
+                        a.portfolio-item(href='#overlay4')
                             .caption
                                 .caption-content
-                                    .h2 Stationary
-                                    p.mb-0 A yellow pencil with envelopes on a clean, blue backdrop!
-                            img.img-fluid(src='assets/img/portfolio-1.jpg', alt='...')
+                                    //.h2 Vanderbilt University Medical Center
+                                    //p.mb-0 Nasheville, Tennessee
+                            img.img-fluid(src='assets/img/vumc-logo.jpg', alt='VUMC logo')
                     .col-lg-6
-                        a.portfolio-item(href='#!')
+                        a.portfolio-item(href='#overlay5')
                             .caption
                                 .caption-content
-                                    .h2 Ice Cream
-                                    p.mb-0 A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!
-                            img.img-fluid(src='assets/img/portfolio-2.jpg', alt='...')
+                                    //- .h2 Digital Global Systems
+                                    //- p.mb-0 Tyson, Virginia
+                            img.img-fluid(src='assets/img/dgs-logo.jpg', alt='DGS logo')
+                .row.gx-0.justify-content-center
                     .col-lg-6
-                        a.portfolio-item(href='#!')
+                        a.portfolio-item(href='#overlay6')
                             .caption
                                 .caption-content
-                                    .h2 Strawberries
-                                    p.mb-0 Strawberries are such a tasty snack, especially with a little sugar on top!
-                            img.img-fluid(src='assets/img/portfolio-3.jpg', alt='...')
-                    .col-lg-6
-                        a.portfolio-item(href='#!')
-                            .caption
-                                .caption-content
-                                    .h2 Workspace
-                                    p.mb-0 A yellow workspace with some scissors, pencils, and other objects.
-                            img.img-fluid(src='assets/img/portfolio-4.jpg', alt='...')
-
+                                    //- .h2 fortyAU
+                                    //- p.mb-0 Nasheville, Tennessee
+                            img.img-fluid(src='assets/img/fortyau-logo.jpg', alt='...')
+            #overlay4.overlay
+                .overlay-content
+                    button.close-btn#close-overlay4 &times;
+                    h2 Vanderbilt University Medical Center
+                    .row.align-items-center
+                        .col-lg-12.overlay1p
+                            p This is a work in progress and will be updated upon completion.
+            #overlay5.overlay
+                .overlay-content
+                    button.close-btn#close-overlay5 &times;
+                    h2 Digital Global Systems
+                    .row.align-items-center
+                        .col-lg-6.overlay2p
+                            p.text-left
+                                
+                        .col-lg-6 
+                            //iframe(src='/assets/pdfs/used-cars.pdf#toolbar=0', width='100%', height='600px', scrolling='yes')
+                    .row.text-center
+                        .col-lg-12
+                            a.btn.btn-primary.btn-xl(href='https://github.com/jaxri/DataMiningProject/tree/main', target='_blank') View Source Code
+            #overlay6.overlay
+                .overlay-content
+                    button.close-btn#close-overlay6 &times;
+                    h2 fortyAU
+                    p This is the description of Project 3.
         // Footer
         footer#footer.footer.text-center
             .container.px-4.px-lg-5.text-center
                     h2.mx-auto.mb-5
                         | Contact Me
                     a.btn.btn-primary.btn-xl(href='mailto:jacksonrini3@gmail.com') Send me an Email!
-            .container.px-4.px-lg-5(style="padding-top: 20px;")
+            .container.px-4.px-lg-5(style="padding-top: 20px; padding-bottom: 20px;")
                 ul.list-inline.mb-5
                     li.list-inline-item
                         a.social-link.rounded-circle.text-white.mr-3(href='https://www.linkedin.com/in/jackson-rini-a6ba601b8/', target='_blank')
