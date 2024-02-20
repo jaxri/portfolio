@@ -93,11 +93,13 @@
     width: 100%;
     max-width: 530px;
     margin: auto auto 1rem;
-
+    background-color: transparent !important; 
     img {
         width: 100%; /* Make images fill their containers */
         height: 400px; /* Set a fixed height */
         object-fit: cover; /* Maintain aspect ratio and fill container */
+        background-blend-mode: normal; 
+        filter: none !important;
     }
     .caption {
         display: flex;
