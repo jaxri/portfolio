@@ -74,11 +74,19 @@ function fadeIn(el, duration, display) {
 document.addEventListener('DOMContentLoaded', function () {
     var openLinks = document.querySelectorAll('.portfolio-item');
     var closeBtns = document.querySelectorAll('[id^="close-overlay"]');
+    var overlays = document.querySelectorAll('.overlay');
 
     function openOverlay(overlayId) {
         console.log("Opening overlay:", overlayId);
         var overlay = document.getElementById(overlayId);
         fadeIn(overlay, 350); // Fade in the overlay
+
+        // Add click event listener to close the overlay when clicking outside of it
+        overlay.addEventListener('click', function (event) {
+            if (event.target === overlay) {
+                closeOverlay(overlayId);
+            }
+        });
     }
 
     function closeOverlay(overlayId) {
@@ -102,5 +110,4 @@ document.addEventListener('DOMContentLoaded', function () {
             closeOverlay(overlayId);
         });
     });
-    
 });
