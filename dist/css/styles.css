@@ -12181,7 +12181,7 @@ footer.footer .social-link:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%; /* Set overlay width to 80% of the viewport */
+  width: 70%; /* Set overlay width to 80% of the viewport */
   height: 90%; /* Set overlay height to 80% of the viewport */
   background-color: white;
   padding: 20px;
@@ -12191,12 +12191,18 @@ footer.footer .social-link:hover {
 }
 #intern .overlay-content .overlay4p {
   text-align: left;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 #intern .overlay-content .overlay5p {
   text-align: left;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 #intern .overlay-content .overlay6p {
   text-align: left;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 #intern .overlay.fade-in {
   display: block;

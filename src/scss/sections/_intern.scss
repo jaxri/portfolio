@@ -28,7 +28,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 90%; /* Set overlay width to 80% of the viewport */
+        width: 70%; /* Set overlay width to 80% of the viewport */
         height: 90%; /* Set overlay height to 80% of the viewport */
         background-color: white;
         padding: 20px;
@@ -37,12 +37,18 @@
         transition: transform 0.3s ease; /* Transform transition */
         .overlay4p {
             text-align: left;
+            margin-left: 50px;
+            margin-right: 50px;
         }
         .overlay5p {
             text-align: left;
+            margin-left: 50px;
+            margin-right: 50px;
         }
         .overlay6p {
             text-align: left;
+            margin-left: 50px;
+            margin-right: 50px;
         }
     }
     
