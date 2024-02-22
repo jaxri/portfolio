@@ -28,8 +28,9 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 70%; /* Set overlay width to 80% of the viewport */
-        height: 90%; /* Set overlay height to 80% of the viewport */
+        width: 70%; 
+        height: 90%; 
+        overflow-y: auto;
         background-color: white;
         padding: 20px;
         border-radius: 10px;
