@@ -12443,7 +12443,7 @@ footer.footer .social-link:hover {
   width: 100%;
   max-width: 530px;
   margin: auto auto 1rem;
-  background-color: transparent !important;
+  background-color: #1b689f;
 }
 .portfolio-item img {
   width: 100%; /* Make images fill their containers */
@@ -12457,7 +12457,7 @@ footer.footer .social-link:hover {
   display: flex;
   height: 100%;
   width: 100%;
-  background-color: rgba(33, 37, 41, 0.2);
+  background-color: rgba(33, 37, 41, 0);
   position: absolute;
   top: 0;
   bottom: 0;
