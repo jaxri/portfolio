@@ -30,6 +30,7 @@
         transform: translate(-50%, -50%);
         width: 90%; /* Set overlay width to 80% of the viewport */
         height: 90%; /* Set overlay height to 80% of the viewport */
+        overflow-y: auto;
         background-color: white;
         padding: 20px;
         border-radius: 10px;
@@ -40,6 +41,9 @@
         }
         .overlay1p {
             text-align: center;
+        }
+        .overlay3p {
+            text-align: left;
         }
     }
     

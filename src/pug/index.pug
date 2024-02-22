@@ -104,8 +104,10 @@ html(lang='en')
                             .caption
                                 .caption-content
                                     .h2 Invoicable Item Automation
-                                    p.mb-0 PDF OCR in tandem with  Selenium website interaction
-                            img.img-fluid(src='assets/img/portfolio-3.jpg', alt='...')
+                                    p.mb-0 PDF OCR in tandem with Selenium website interaction
+                            video.img-fluid(autoplay loop muted)
+                                source(src='assets/vid/vumcrecording.mp4', type='video/mp4')
+                                Your browser does not support the video tag.
             #overlay1.overlay
                 .overlay-content
                     button.close-btn#close-overlay1 &times;
@@ -150,8 +152,43 @@ html(lang='en')
             #overlay3.overlay
                 .overlay-content
                     button.close-btn#close-overlay3 &times;
-                    h2.mb-3 Project 3 Description
-                    p This is the description of Project 3.
+                    h2.mb-3 Automation Solution for Clinical Trials Revenue Generation
+                    .row.align-items-center
+                         .col-lg-6.overlay3p
+                             p.text-left
+                                 strong Description:
+                             p Developed a sophisticated automation process for Vanderbilt Ingram Cancer Center's Clinical Trial Office to streamline the creation of invoiceable items within their Clinical Trials Management System (Oncore). Leveraging Selenium, OCRs, and data scrapers, the project significantly improved operational efficiency and generated incremental annual revenue exceeding $500K. This solution utilizes information gathered through OCR to enhance data accuracy and streamline processes.
+                             p.text-left
+                                 strong Key Points:
+                             ul
+                                li
+                                    | Developed automation process for Vanderbilt Ingram Cancer Center's Clinical Trial Office.
+                                li
+                                    | Streamlined creation of invoiceable items within Clinical Trials Management System (Oncore).
+                                li
+                                    | Utilized Selenium, OCRs, and data scrapers for efficient data handling.
+                                li
+                                    | Generated incremental annual revenue exceeding $500K.
+                                li
+                                    | Enhanced operational efficiency and accuracy while reducing manual errors.
+                             p.text-left
+                                 strong Technologies Used:
+                             ul
+                                 li Selenium: Facilitated web-based interactions and data entry within Oncore's interface.
+                                 li OCRs (Optical Character Recognition): Extracted relevant information from documents and reports, enhancing data accuracy.
+                                 li Data Scrapers: Gathered and processed data from disparate sources for comprehensive automation coverage.
+                             p.text-left
+                                 strong Impact:
+                             ul
+                                 li Marked improvement in operational efficiency by eliminating manual data entry tasks and reducing processing times.
+                                 li Generated substantial incremental annual revenue, demonstrating financial impact.
+                                 li Enhanced data accuracy and compliance, mitigating risks associated with manual errors and regulatory non-compliance.
+                             p.text-left
+                                 strong Conclusion:
+                             p.text-left
+                                 | The automation solution developed for Vanderbilt Ingram Cancer Center's Clinical Trial Office showcases the transformative potential of technology in healthcare revenue management. By streamlining processes and driving revenue growth, the project underscores the importance of automation in optimizing operational workflows and financial outcomes in clinical trial management. The integration of OCR technology further enhances data accuracy and efficiency, contributing to the overall success of the solution.
+                         .col-lg-6
+                             iframe(src='/assets/pdfs/florence final.pdf#toolbar=0', width='100%', height='600px', scrolling='yes')
 
         // Skills
         section#skills.skills.content-section.bg-light

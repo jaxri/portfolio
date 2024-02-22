@@ -12181,8 +12181,9 @@ footer.footer .social-link:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%; /* Set overlay width to 80% of the viewport */
-  height: 90%; /* Set overlay height to 80% of the viewport */
+  width: 70%;
+  height: 90%;
+  overflow-y: auto;
   background-color: white;
   padding: 20px;
   border-radius: 10px;
@@ -12390,6 +12391,7 @@ footer.footer .social-link:hover {
   transform: translate(-50%, -50%);
   width: 90%; /* Set overlay width to 80% of the viewport */
   height: 90%; /* Set overlay height to 80% of the viewport */
+  overflow-y: auto;
   background-color: white;
   padding: 20px;
   border-radius: 10px;
@@ -12401,6 +12403,9 @@ footer.footer .social-link:hover {
 }
 #projects .overlay-content .overlay1p {
   text-align: center;
+}
+#projects .overlay-content .overlay3p {
+  text-align: left;
 }
 #projects .overlay.fade-in {
   display: block;
