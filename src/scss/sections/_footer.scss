@@ -5,8 +5,8 @@
     background: $white;
 }
 footer.footer {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
 
     .social-link {
         display: block;
@@ -20,7 +20,7 @@ footer.footer {
         box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 
         &:hover {
-            background-color: lighten($black, 15%);
+            background-color: lighten($black, 20%);
             text-decoration: none;
         }
     }

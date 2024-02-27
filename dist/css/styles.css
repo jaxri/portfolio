@@ -11988,8 +11988,8 @@ html {
 }
 
 .content-section {
-  padding-top: 7.5rem;
-  padding-bottom: 7.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
 }
 
 .content-section-heading h2, .content-section-heading .h2 {
@@ -12121,8 +12121,8 @@ html {
 
 #about {
   background: #fff;
-  padding-top: 7.5rem;
-  padding-bottom: 7.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
 }
 #about h2, #about .h2 {
   text-align: center;
@@ -12136,8 +12136,8 @@ html {
 }
 
 footer.footer {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 footer.footer .social-link {
   display: block;
@@ -12151,7 +12151,7 @@ footer.footer .social-link {
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 footer.footer .social-link:hover {
-  background-color: #262626;
+  background-color: #333333;
   text-decoration: none;
 }
 
@@ -12240,13 +12240,13 @@ footer.footer .social-link:hover {
 }
 
 .portfolio-item {
-  display: block;
+  display: inline-block;
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: calc(50% - 20px);
   max-width: 530px;
-  margin: auto auto 1rem;
-  background-color: transparent !important;
+  margin: 0 20px 20px 0;
+  vertical-align: top;
 }
 .portfolio-item img {
   width: 100%;
@@ -12258,8 +12258,8 @@ footer.footer .social-link:hover {
 }
 .portfolio-item .caption {
   display: flex;
-  height: 100%;
-  width: 100%;
+  height: 90%;
+  width: 90%;
   background-color: transparent;
   position: absolute;
   top: 0;
@@ -12297,7 +12297,7 @@ footer.footer .social-link:hover {
 @media (min-width: 992px) {
   .portfolio-item {
     max-width: none;
-    margin: 0;
+    margin: 3rem;
   }
   .portfolio-item .caption {
     transition: background-color 0.7s, -webkit-clip-path 0.25s ease-out;
@@ -12442,13 +12442,12 @@ footer.footer .social-link:hover {
 }
 
 .portfolio-item {
-  display: block;
+  display: inline-block;
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: 97.5%;
   max-width: 530px;
-  margin: auto auto 1rem;
-  background-color: #1b689f;
+  vertical-align: top;
 }
 .portfolio-item img {
   width: 100%; /* Make images fill their containers */
@@ -12492,6 +12491,14 @@ footer.footer .social-link:hover {
   .portfolio-item {
     max-width: none;
     margin: 0;
+  }
+  .portfolio-item .row.gx-0.justify-content-center {
+    margin-left: -10px; /* Adjust margin to account for negative margin on the columns */
+    margin-right: -10px; /* Adjust margin to account for negative margin on the columns */
+  }
+  .portfolio-item .col-lg-6 {
+    padding-left: 10px; /* Compensate for negative margin on the columns */
+    padding-right: 10px; /* Compensate for negative margin on the columns */
   }
   .portfolio-item .caption {
     transition: background-color 0.7s, -webkit-clip-path 0.25s ease-out;
@@ -12547,10 +12554,10 @@ footer.footer .social-link:hover {
 .service-icon {
   background-color: #fff;
   color: #1b689f;
-  height: 7rem;
-  width: 7rem;
+  height: 5rem;
+  width: 5rem;
   display: block;
-  line-height: 7.5rem;
+  line-height: 5rem;
   font-size: 2.25rem;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
