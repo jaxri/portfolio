@@ -91,13 +91,12 @@
         }
 }
 .portfolio-item {
-    display: block;
+    display: inline-block;
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 97.5%;
     max-width: 530px;
-    margin: auto auto 1rem;
-    background-color: #1b689f; 
+    vertical-align: top;
     img {
         width: 100%; /* Make images fill their containers */
         height: 400px; /* Set a fixed height */
@@ -141,11 +140,18 @@
     @media(min-width: 992px) {
         max-width: none;
         margin: 0;
-
+        .row.gx-0.justify-content-center {
+            margin-left: -10px; /* Adjust margin to account for negative margin on the columns */
+            margin-right: -10px; /* Adjust margin to account for negative margin on the columns */
+        }
+        .col-lg-6 {
+            padding-left: 10px; /* Compensate for negative margin on the columns */
+            padding-right: 10px; /* Compensate for negative margin on the columns */
+        }
         .caption {
             transition: clip-path 0.25s ease-out, background-color 0.7s;
             clip-path: inset(0px);
-
+            
             .caption-content {
                 transition: opacity 0.25s;
                 margin-left: 5rem;
