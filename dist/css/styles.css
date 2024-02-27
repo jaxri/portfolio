@@ -12492,14 +12492,6 @@ footer.footer .social-link:hover {
     max-width: none;
     margin: 0;
   }
-  .portfolio-item .row.gx-0.justify-content-center {
-    margin-left: -10px; /* Adjust margin to account for negative margin on the columns */
-    margin-right: -10px; /* Adjust margin to account for negative margin on the columns */
-  }
-  .portfolio-item .col-lg-6 {
-    padding-left: 10px; /* Compensate for negative margin on the columns */
-    padding-right: 10px; /* Compensate for negative margin on the columns */
-  }
   .portfolio-item .caption {
     transition: background-color 0.7s, -webkit-clip-path 0.25s ease-out;
     transition: clip-path 0.25s ease-out, background-color 0.7s;
