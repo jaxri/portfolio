@@ -12130,9 +12130,11 @@ html {
 #about .slideshow-container {
   position: relative;
   margin: auto;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
   width: 600px;
   height: 700px;
-  overflow: hidden;
 }
 #about .slideshow-container .slide {
   display: none;
@@ -12143,16 +12145,17 @@ html {
   height: 100%;
 }
 #about .slideshow-container img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  padding-right: 20px;
 }
 #about .slideshow-container .slideshow-controls {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: calc(100% - 20px);
   background-color: black;
   display: flex;
   justify-content: space-between;
