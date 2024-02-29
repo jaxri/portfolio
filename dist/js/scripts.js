@@ -3,87 +3,101 @@
 * Copyright 2013-2024 undefined
 * Licensed under undefined (https://github.com/StartBootstrap/portfolio/blob/master/LICENSE)
 */
-window.addEventListener('DOMContentLoaded', event => {
-
+window.addEventListener('DOMContentLoaded', () => {
     const sidebarWrapper = document.getElementById('sidebar-wrapper');
-    let scrollToTopVisible = false;
-    // Closes the sidebar menu
     const menuToggle = document.body.querySelector('.menu-toggle');
-    menuToggle.addEventListener('click', event => {
+    const scrollTriggerList = [...document.querySelectorAll('#sidebar-wrapper .js-scroll-trigger')];
+    let scrollToTopVisible = false;
+
+    menuToggle.addEventListener('click', (event) => {
         event.preventDefault();
         sidebarWrapper.classList.toggle('active');
-        _toggleMenuIcon();
+        toggleMenuIcon();
         menuToggle.classList.toggle('active');
-    })
-
-    // Closes responsive menu when a scroll trigger link is clicked
-    var scrollTriggerList = [].slice.call(document.querySelectorAll('#sidebar-wrapper .js-scroll-trigger'));
-    scrollTriggerList.map(scrollTrigger => {
-        scrollTrigger.addEventListener('click', () => {
-            sidebarWrapper.classList.remove('active');
-            menuToggle.classList.remove('active');
-            _toggleMenuIcon();
-        })
     });
 
-    function _toggleMenuIcon() {
-        const menuToggleBars = document.body.querySelector('.menu-toggle > .fa-bars');
-        const menuToggleTimes = document.body.querySelector('.menu-toggle > .fa-xmark');
-        if (menuToggleBars) {
-            menuToggleBars.classList.remove('fa-bars');
-            menuToggleBars.classList.add('fa-xmark');
-        }
-        if (menuToggleTimes) {
-            menuToggleTimes.classList.remove('fa-xmark');
-            menuToggleTimes.classList.add('fa-bars');
-        }
-    }
+    scrollTriggerList.forEach(scrollTrigger => {
+        scrollTrigger.addEventListener('click', () => {
+            closeSidebar();
+        });
+    });
 
-    // Scroll to top button appear
     document.addEventListener('scroll', () => {
         const scrollToTop = document.querySelector('.scroll-to-top');
         if (document.documentElement.scrollTop > 100) {
-            scrollToTop.style.display = 'block'; // Show button when scrolled down
+            fadeIn(scrollToTop, 350, 'block');
+            scrollToTopVisible = true;
         } else {
-            scrollToTop.style.display = 'none'; // Hide button when at the top
+            fadeOut(scrollToTop, 350);
+            scrollToTopVisible = false;
         }
     });
-})
 
-function fadeOut(el, duration) {
-    el.style.opacity = 1;
-    var start = performance.now();
-    (function fade() {
-        var elapsed = performance.now() - start;
-        el.style.opacity = 1 - elapsed / duration;
-        if (elapsed < duration) {
-            requestAnimationFrame(fade);
-        } else {
-            el.style.display = "none";
+    function toggleMenuIcon() {
+        const menuToggleBars = document.body.querySelector('.menu-toggle > .fa-bars');
+        const menuToggleTimes = document.body.querySelector('.menu-toggle > .fa-xmark');
+        if (menuToggleBars) {
+            menuToggleBars.classList.toggle('fa-bars');
+            menuToggleBars.classList.toggle('fa-xmark');
         }
-    })();
+        if (menuToggleTimes) {
+            menuToggleTimes.classList.toggle('fa-xmark');
+            menuToggleTimes.classList.toggle('fa-bars');
+        }
+    }
+
+    function closeSidebar() {
+        sidebarWrapper.classList.remove('active');
+        menuToggle.classList.remove('active');
+        toggleMenuIcon();
+    }
+});
+
+function fade(el, duration, targetOpacity, callback) {
+    const start = performance.now();
+    const initialOpacity = parseFloat(getComputedStyle(el).opacity);
+
+    function animate() {
+        const elapsed = performance.now() - start;
+        const progress = elapsed / duration;
+        const currentOpacity = initialOpacity + (targetOpacity - initialOpacity) * progress;
+
+        el.style.opacity = currentOpacity;
+
+        if (progress < 1) {
+            requestAnimationFrame(animate);
+        } else {
+            if (targetOpacity === 0) {
+                el.style.display = "none";
+            }
+            if (callback) {
+                callback();
+            }
+        }
+    }
+
+    requestAnimationFrame(animate);
 }
 
-function fadeIn(el, duration, display) {
+function fadeOut(el, duration, callback) {
+    fade(el, duration, 0, callback);
+}
+
+function fadeIn(el, duration, display, callback) {
     el.style.opacity = 0;
     el.style.display = display || "block";
-    var start = performance.now();
-    (function fade() {
-        var elapsed = performance.now() - start;
-        el.style.opacity = elapsed / duration;
-        if (elapsed < duration) {
-            requestAnimationFrame(fade);
-        }
-    })();
+    fade(el, duration, 1, callback);
 }
+
 document.addEventListener('DOMContentLoaded', function () {
-    var openLinks = document.querySelectorAll('.portfolio-item');
-    var closeBtns = document.querySelectorAll('[id^="close-overlay"]');
-    var overlays = document.querySelectorAll('.overlay');
+    const openLinks = document.querySelectorAll('.portfolio-item');
+    const closeBtns = document.querySelectorAll('[id^="close-overlay"]');
+    const slides = document.querySelectorAll('.slide');
+    let slideIndex = 0;
 
     function openOverlay(overlayId) {
         console.log("Opening overlay:", overlayId);
-        var overlay = document.getElementById(overlayId);
+        const overlay = document.getElementById(overlayId);
         fadeIn(overlay, 350); // Fade in the overlay
 
         // Add click event listener to close the overlay when clicking outside of it
@@ -96,23 +110,54 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function closeOverlay(overlayId) {
         console.log("Closing overlay:", overlayId);
-        var overlay = document.getElementById(overlayId);
+        const overlay = document.getElementById(overlayId);
         fadeOut(overlay, 350); // Fade out the overlay
     }
 
-    openLinks.forEach(function (link) {
+    openLinks.forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault();
-            var overlayId = this.closest('.portfolio-item').getAttribute('href').replace('#', '');
+            const overlayId = this.closest('.portfolio-item').getAttribute('href').replace('#', '');
             console.log("Clicked caption:", overlayId);
             openOverlay(overlayId);
         });
     });
 
-    closeBtns.forEach(function (btn) {
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                fadeIn(slide, 350);
+            } else {
+                fadeOut(slide, 350);
+            }
+        });
+    }
+
+    function nextSlide() {
+        slideIndex++;
+        if (slideIndex >= slides.length) {
+            slideIndex = 0;
+        }
+        showSlide(slideIndex);
+    }
+
+    function prevSlide() {
+        slideIndex--;
+        if (slideIndex < 0) {
+            slideIndex = slides.length - 1;
+        }
+        showSlide(slideIndex);
+    }
+
+    closeBtns.forEach(btn => {
         btn.addEventListener('click', function () {
-            var overlayId = this.getAttribute('id').replace('close-overlay', 'overlay');
+            const overlayId = this.getAttribute('id').replace('close-overlay', 'overlay');
             closeOverlay(overlayId);
         });
     });
+
+    document.querySelector('.prev').addEventListener('click', prevSlide);
+    document.querySelector('.next').addEventListener('click', nextSlide);
+
+    showSlide(slideIndex); // Show the first slide initially
 });
