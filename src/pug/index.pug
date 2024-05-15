@@ -91,11 +91,13 @@ html(lang='en')
                 .row.gx-0.mb-2
                     .col-lg-6
                         a.portfolio-item(href='#overlay1')
-                            .caption
+                            .caption.superpowers-caption
                                 .caption-content
                                     .h2 Senior Project - Superpowers
                                     p.mb-0 Automation of venture investment opportunity discovery and evaluation process
-                            img.img-fluid(src='assets/img/portfolio-1.jpg', alt='...')
+                            video.img-fluid(autoplay loop muted)
+                                source(src='assets/vid/superpowers.mp4', type='video/mp4')
+                                Your browser does not support the video tag.
                     .col-lg-6
                         a.portfolio-item(href='#overlay2')
                             .caption
@@ -119,9 +121,107 @@ html(lang='en')
                 .overlay-content.text-black
                     button.close-btn#close-overlay1 &times;
                     h2.mb-3 Superpowers
-                    .row.align-items-center
-                        .col-lg-12.overlay1p
-                            p This is a work in progress and will be updated upon completion.
+                    .row.align-items-top.mb-5
+                        .col-lg-6.overlay2p
+                            p.text-left
+                                strong Description:
+                                | This project aims to contribute to the automation of venture investment opportunity discovery and aid in the evaluation process, closely emulating the decision-making procedures employed by investors, encompassing data collection, preliminary analysis, and effective visualization. Leveraging advanced machine learning techniques, the project seeks to streamline critical processes, enhancing efficiency and accuracy, ultimately enabling investors to redirect their focus towards more strategic initiatives, resulting in better-informed investment decisions.
+                            p.text-left
+                                strong Objectives and Scope:
+                            p.text-left
+                                strong Requirements:
+                            ul
+                                li
+                                    | Develop data collection programs to collect specific data
+                                li
+                                    | Store data from data collection programs and other sources in databases
+                                li
+                                    | Conduct testing and validation of the entire system to ensure its accuracy and reliability
+                                li
+                                    | Document functions (e.g., API)
+                                li
+                                    | Use methods (e.g., Machine Learning) to recommend potential ventures for investment consideration
+                                li
+                                    | Use tools (e.g., Generative AI) to generate reports for potential ventures
+                                li
+                                    | Create a visualization tool to display data (e.g., front end dashboard)
+                            p.text-left
+                                strong Scope:
+                            ul
+                                li
+                                    | Development of data collection programs to collect data
+                                li
+                                    | Importing data from data sources (e.g., Crunchbase API)
+                                li
+                                    | Testing and validation of the system
+                                li
+                                    | Implementation of machine learning algorithms to match investors and companies and/or entrepreneurs
+                                li
+                                    | Development of program (e.g., language model) to generate reports of matched companies and/or entrepreneurs
+                                li
+                                    | Creation of data visualization dashboard
+                            p.text-left
+                                strong Project Approach:
+                            p.text-left
+                                strong Assumptions:
+                            ul
+                                li
+                                    | Create data collection programs to collect data (e.g., from websites) and record it in a database
+                                li
+                                    | Clean and filter data to be usable and generate list of exceptions from data that is flagged during cleaning
+                                li
+                                    | Feed data into the program for use
+                            p.text-left
+                                strong Risks and Issues:
+                            ul
+                                li
+                                    | Data collection through PDFs may require the use of an OCR which are generally unreliable
+                                li
+                                    | Data collection through APIs may be costly
+                                li
+                                    | Data collection through web scraping may only be for academic purposes
+                                li
+                                    | If OCR is used, this would lead to higher risk of incomplete data or misidentification of data
+                                li
+                                    | ML methods may overfit or underfit and may not perform with expected accuracy
+                                li
+                                    | Generative AI may not create predictable reports
+                            p.text-left
+                                strong Changes:
+                                | Any future changes to the project scope and requirements will be agreed upon by the team with unanimous agreement. In addition, changes will also be reviewed by the sponsor for final approval. Such changes will be documented through appropriate channels (e.g., Project Log on GitHub).
+                            p.text-left
+                                strong Project Members:
+                            table
+                                tr
+                                    th Name
+                                    th Email
+                                tr
+                                    td Shuyu Song
+                                    td shso9201@colorado.edu
+                                tr
+                                    td Nina Ning
+                                    td Nina.Ning@colorado.edu
+                                tr
+                                    td Jackson Rini
+                                    td jari3257@colorado.edu
+                                tr
+                                    td Angel Romero
+                                    td anro9968@colorado.edu
+                                br
+                            p.text-left
+                                strong Project Customers:
+                            table
+                                    td Patricia Columbus-Powers
+                                    td pscpower@gmail.com, pscpowers@superpowers-inc.com
+                                    td Patricia Columbus-Powers
+                                    td December 11, 2023
+                        .col-lg-6
+                            iframe(src='/assets/pdfs/machinelearning.pdf#toolbar=0', width='100%', height='600px', scrolling='yes')
+                    .row.text-center
+                        .col-lg-12
+                            a.btn.btn-primary.mb-3.btn-xl(href='https://github.com/Superpowers-CU/ai-for-venture-investment', target='_blank') View Source Code
+
+
             #overlay2.overlay
                 .overlay-content.text-black
                     button.close-btn#close-overlay2 &times;
@@ -132,7 +232,7 @@ html(lang='en')
                                 strong Used Cars Market Analysis in Saudi Arabia
                             p.text-left
                                 strong Abstract:
-                                | This project utilizes regression analysis to assess the depreciation rates of used car brands in Saudi Arabia, focusing on mileage as a determining factor. Two datasets were consolidated and cleaned to enhance data quality. Three regression models - Random Forest, Linear Regression, and XGBoost - were employed to predict car prices and evaluate depreciation rates. XGBoost emerged as the most accurate model, revealing insights into which car brands maintain their value best. 
+                                | This project utilizes regression analysis to assess the depreciation rates of used car brands in Saudi Arabia, focusing on mileage as a determining factor. Two datasets were consolidated and cleaned to enhance data quality. Three regression models - Random Forest, Linear Regression, and XGBoost - were employed to predict car prices and evaluate depreciation rates. XGBoost emerged as the most accurate model, revealing insights into which car brands maintain their value best.
                             p.text-left
                                 strong Introduction:
                                 | The COVID-19 pandemic and economic factors have led to a surge in the used car market in Saudi Arabia, prompting a shift in consumer preferences towards more affordable options. Understanding the factors influencing used car depreciation rates has become crucial. This project aims to provide insights into which cars retain their value the most, aiding consumers in making informed purchasing decisions.
@@ -141,7 +241,7 @@ html(lang='en')
                                 | Previous studies, such as Mammadov (2021) and Erdem & Senturk (2009), have analyzed used car markets using regression techniques, offering valuable insights into factors affecting car prices and depreciation rates.
                             p.text-left
                                 strong Main Technique:
-                                | Data understanding involved consolidating and cleaning datasets, followed by preprocessing for regression analysis. Three regression models - Random Forest, Linear Regression, and XGBoost - were employed to predict car prices and evaluate depreciation rates. 
+                                | Data understanding involved consolidating and cleaning datasets, followed by preprocessing for regression analysis. Three regression models - Random Forest, Linear Regression, and XGBoost - were employed to predict car prices and evaluate depreciation rates.
                             p.text-left
                                 strong Evaluation:
                                 | Depreciation rates of different car brands were evaluated using regression models, revealing insights into which brands retain their value best. GMC, Chevrolet, and Mitsubishi were identified as top performers in maintaining value.
@@ -151,7 +251,7 @@ html(lang='en')
                             p.text-left
                                 strong Future Work:
                                 | Future studies aim to enhance data quality by including more diverse datasets and exploring additional predictive analyses, such as deep neural networks. Furthermore, incorporating broader economic factors into the analysis could offer a more comprehensive understanding of the Saudi car market.
-                        .col-lg-6 
+                        .col-lg-6
                             iframe(src='/assets/pdfs/used-cars.pdf#toolbar=0', width='100%', height='600px', scrolling='yes')
                     .row.text-center
                         .col-lg-12
@@ -196,6 +296,8 @@ html(lang='en')
                                 | The automation solution developed for Vanderbilt Ingram Cancer Center's Clinical Trial Office showcases the transformative potential of technology in healthcare revenue management. By streamlining processes and driving revenue growth, the project underscores the importance of automation in optimizing operational workflows and financial outcomes in clinical trial management. The integration of OCR technology further enhances data accuracy and efficiency, contributing to the overall success of the solution.
                         .col-lg-6
                             iframe(src='/assets/pdfs/florence final.pdf#toolbar=0', width='100%', height='600px', scrolling='yes')
+
+
 
         // Skills
         section#skills.skills.content-section.bg-light

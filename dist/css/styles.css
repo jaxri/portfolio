@@ -12513,10 +12513,16 @@ footer.footer .social-link:hover {
 .portfolio-item .caption .caption-content h2, .portfolio-item .caption .caption-content .h2 {
   font-size: 1rem;
   text-transform: uppercase;
+  padding: 5px;
+  background-color: rgba(60, 60, 60, 0.7); /* Grey background with transparency */
+  border-radius: 5px;
 }
 .portfolio-item .caption .caption-content p {
   font-weight: 300;
   font-size: 1.4rem;
+  padding: 5px;
+  background-color: rgba(60, 60, 60, 0.7); /* Grey background with transparency */
+  border-radius: 5px;
 }
 .portfolio-item video {
   width: 100%;
